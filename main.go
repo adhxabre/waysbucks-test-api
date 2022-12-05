@@ -39,6 +39,6 @@ func main() {
 
 	// Modify 1 line this below code get port from env ...
 	var port = os.Getenv("PORT")
-	fmt.Println("server running localhost")
+	fmt.Println("server running localhost:" + port)
 	http.ListenAndServe("localhost:"+port, handlers.CORS(AllowedHeaders, AllowedMethods, AllowedOrigins)(r))
 }
